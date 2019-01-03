@@ -4,9 +4,7 @@
     [Parameter (Mandatory=$true, HelpMessage="Enter the name of the ZipFolder to be created")]
     $BuildZip_FolderName,
     [Parameter (Mandatory=$true, HelpMessage="Enter list of folders that you want to Zip")]
-    $Folder_List,
-	[Parameter (Mandatory=$true, HelpMessage="Enter the Build Name 'Service' or 'Framework'")]	
-	[string]$Build
+    $Folder_List
 )
 function Create-Zip{
 	<#  
@@ -33,7 +31,7 @@ function Create-Zip{
         [string] $source,
         [Parameter(Mandatory=$true, HelpMessage="Enter the zip file name - Enter the full path")]
         [string]$destination,
-		[Parameter (Mandatory=$true, HelpMessage="Enter the name of the ZipFolder to be created")]
+	[Parameter (Mandatory=$true, HelpMessage="Enter the name of the ZipFolder to be created")]
         [string]$zipFolderName
     )    
 	$zipFolder = Join-Path -path $destination -ChildPath $zipFolderName
